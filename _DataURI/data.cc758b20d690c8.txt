@@ -1,0 +1,1 @@
+chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/source/bitcoinjs-vendor-C2cTb9M2.js

@@ -1,0 +1,1 @@
+chrome-extension://cpikalnagknmlfhnilhfelifgbollmmp/assets/contentScript.js-C6QK1s1Z.js

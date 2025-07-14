@@ -288,6 +288,11 @@ main.hero-section {
   min-height: 70px;
 }
 
+.footer h2 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+}
+
 .token-name {
   position: absolute;
   left: 50%;
@@ -399,8 +404,8 @@ main.hero-section {
   }
 
   .same-dev {
-    font-size: 1.2rem;
-    bottom: 2px;
+    font-size: 1rem;
+    bottom: 145px;
     padding: 0.1em 0.5em;
   }
 

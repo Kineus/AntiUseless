@@ -1,0 +1,592 @@
+/* styles.css */
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000 0%, #2d1a0b 60%, #6e4b1f 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+main.hero-section {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+
+
+.nav-buttons img {
+  width: 28px;
+  height: 28px;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 1rem;
+  justify-content: space-evenly;
+  right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.chart-link {
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.raydium-button {
+  background: #f3b23a;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 2px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.raydium-button:hover,
+.raydium-button:focus {
+  background: #ffde59;
+  color: #222;
+  transform: scale(1.07);
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0.3;
+  }
+
+  20% {
+    opacity: 0.7;
+  }
+
+  30% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.4;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+}
+
+@keyframes headingEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    letter-spacing: 0.5em;
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+    letter-spacing: 0.04em;
+  }
+
+  80% {
+    transform: scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: 0.02em;
+  }
+}
+
+@keyframes headingShimmer {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 0 #f3b23a;
+  }
+
+  20% {
+    color: #f3b23a;
+    text-shadow: 0 0 12px #fff;
+  }
+
+  40% {
+    color: #fff;
+    text-shadow: 0 0 0 #f3b23a;
+  }
+
+  100% {
+    color: #fff;
+    text-shadow: 0 0 0 #f3b23a;
+  }
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  margin: 0.5rem 0;
+  font-family: 'Barlow Semi Condensed', Arial, sans-serif;
+  letter-spacing: 0.02em;
+  animation: headingShimmer 2.8s infinite;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.contract-address {
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  color: #bbb;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1.5rem 0;
+  gap: 40px;
+  height: 340px;
+}
+
+.dev-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+}
+
+.dev-info-text {
+  font-family: 'Barlow Semi Condensed', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f3b23a;
+  letter-spacing: 0.04em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dev-info-img {
+  width: 350px;
+  height: auto;
+  box-shadow: 0 8px 15px #0005;
+  transform: rotate(-10deg);
+}
+
+.coin-left {
+  width: 580px;
+  height: auto;
+  z-index: 2;
+}
+
+.same-dev {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%) rotate(-18deg);
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 0.2em 1em;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 3;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.same-dev:hover {
+  transform: translateX(-50%) rotate(-18deg) scale(1.08);
+  box-shadow: 0 4px 16px #0006;
+}
+
+.movement {
+  display: block;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Barlow Semi Condensed', Arial, sans-serif;
+}
+
+.token-name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.bf {
+  padding-left: 10px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 1rem 1rem;
+  min-height: 70px;
+}
+
+.token-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.bonk-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  padding-left: 20px;
+  transition: transform 0.3s;
+}
+
+.bonk-logo:hover {
+  transform: scale(1.13) rotate(-8deg);
+}
+
+.bonk-love {
+  font-size: 1.1rem;
+  color: #fff;
+  font-family: 'Caveat', cursive, sans-serif;
+
+}
+
+.heart {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .top-nav {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.5rem 0.2rem 0.7rem 0.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    z-index: 1100;
+    margin-left: 0;
+  }
+
+  .nav-buttons {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    min-width: 180px;
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .nav-buttons.open {
+    display: flex;
+  }
+
+  .icons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 150px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .nav-buttons>* {
+    margin-bottom: 16px;
+  }
+
+  .nav-buttons>*:last-child {
+    margin-bottom: 0;
+  }
+
+  .chart-link,
+  .raydium-button {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+    margin-bottom: 0;
+  }
+
+  .characters {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    min-height: 180px;
+  }
+
+  .coin-left {
+    width: 95vw;
+    max-width: 420px;
+    min-width: 120px;
+  }
+
+  .same-dev {
+    font-size: 1.2rem;
+    bottom: 2px;
+    padding: 0.1em 0.5em;
+  }
+
+  .movement {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+
+  .contract-address {
+    font-size: 0.8rem;
+    word-break: break-all;
+    padding: 0 4vw;
+  }
+
+  .buy-me-label {
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .token-name {
+    font-size: 1.6rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+    position: relative;
+  }
+
+  .bonk-logo {
+    padding-left: 0;
+    margin-right: 0;
+    margin-bottom: 6px;
+    width: 38px;
+  }
+
+  .bonk-love {
+    font-size: 3rem;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .token-name {
+    position: static;
+    transform: none;
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .buy-me-label {
+    margin-top: 12px;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    white-space: normal;
+  }
+
+  .hero-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .footer {
+    margin-top: 60px;
+  }
+
+  .buy-me-label {
+    margin-top: 60px;
+  }
+
+  .characters {
+    margin-bottom: 0;
+    gap: 4px;
+  }
+
+  .movement {
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    padding-top: 20px;
+  }
+
+  .dev-info-right {
+    margin-left: 0;
+    margin-top: 18px;
+  }
+
+  .dev-info-img {
+    width: 90vw;
+    max-width: 98vw;
+    min-width: 100px;
+    box-shadow: 0 4px 8px #0005;
+    transform: rotate(-7deg);
+  }
+
+  .dev-info-text {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    margin-left: 10px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 4px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 600px) {
+    .nav-buttons {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 950px;
+      background: #181818ee;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px #0007;
+      padding: 12px 12px;
+      z-index: 1000;
+      gap: 16px;
+      min-width: 160px;
+      align-items: center;
+    }
+
+    .nav-buttons.open {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+}
+
+.icons a img {
+  transition: filter 0.3s, transform 0.2s;
+}
+
+.icons a:hover img {
+  filter: brightness(1.5) drop-shadow(0 0 6px #f3b23a);
+  transform: scale(1.13) rotate(-7deg);
+}
+
+.chart-link {
+  transition: color 0.3s, transform 0.2s;
+}
+
+.chart-link:hover,
+.chart-link:focus {
+  color: #f3b23a;
+  transform: scale(1.08);
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+}

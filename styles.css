@@ -72,6 +72,10 @@ body {
     margin: 0.2rem 0 0 0;
 }
 
+.yellow {
+    color: #ffe600;
+}
+
 /* Globe Section */
 .globe-section {
     margin: 2rem 0;
@@ -181,6 +185,8 @@ body {
 .join-btn:hover {
     background: linear-gradient(to right, #2563eb, #3b82f6);
 }
+
+
 
 /* Tablet (portrait and landscape) */
 @media (max-width: 900px) {
